@@ -65,24 +65,29 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## List API
+## List of API Endpoints
 
--   **Withount JWT TOKEN**
-    POST -> http://127.0.0.1:8000/api/login
-    POST -> http://127.0.0.1:8000/api/register
+### **Without JWT Token**
 
--   **Withount JWT TOKEN**
-    **LEADS MANAGEMENT**
-    GET -> http://127.0.0.1:8000/api/leads
-    POST -> http://127.0.0.1:8000/api/leads
-    GET -> http://127.0.0.1:8000/api/leads/{id}
-    PATCH -> http://127.0.0.1:8000/api/leads/{id}
-    DELETE -> http://127.0.0.1:8000/api/leads/{id}
+-   `POST` -> http://127.0.0.1:8000/api/login
+-   `POST` -> http://127.0.0.1:8000/api/register
 
-**LEAD STATUS**
-GET -> http://127.0.0.1:8000/api/leads-status
-POST -> http://127.0.0.1:8000/api/leads-status
-DELETE -> http://127.0.0.1:8000/api/leads-status/{id}
+### **With JWT Token**
 
-**EDIT USER(punish_date and type_sales)**
-PATCH -> http://127.0.0.1:8000/api/users/{id}
+#### **LEADS MANAGEMENT**
+
+-   `GET` -> http://127.0.0.1:8000/api/leads
+-   `POST` -> http://127.0.0.1:8000/api/leads
+-   `GET` -> http://127.0.0.1:8000/api/leads/{id}
+-   `PATCH` -> http://127.0.0.1:8000/api/leads/{id}
+-   `DELETE` -> http://127.0.0.1:8000/api/leads/{id}
+
+#### **LEAD STATUS**
+
+-   `GET` -> http://127.0.0.1:8000/api/leads-status
+-   `POST` -> http://127.0.0.1:8000/api/leads-status
+-   `DELETE` -> http://127.0.0.1:8000/api/leads-status/{id}
+
+#### **EDIT USER (punish_date and type_sales)**
+
+-   `PATCH` -> http://127.0.0.1:8000/api/users/{id}
