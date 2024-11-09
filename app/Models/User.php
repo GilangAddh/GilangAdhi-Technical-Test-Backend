@@ -12,6 +12,18 @@ class User extends Authenticatable  implements JWTSubject
 {
     use HasApiTokens, Notifiable;
 
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'role_id',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
     public function getJWTIdentifier()
     {
         return $this->getKey();
