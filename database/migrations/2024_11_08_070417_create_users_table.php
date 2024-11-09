@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('password');
             $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
             $table->date('punish_date')->nullable();
+            $table->boolean('is_residential')->default(false);
+            $table->boolean('is_commercial')->default(false);
             $table->timestamps();
         });
     }

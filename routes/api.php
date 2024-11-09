@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\LeadStatusController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,5 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/leads-status', [LeadStatusController::class, 'index']);
     Route::post('/leads-status', [LeadStatusController::class, 'store']);
     Route::delete('/leads-status/{id}', [LeadStatusController::class, 'destroy']);
+    Route::patch('/users/{id}', [UserController::class, 'update']);
 });
