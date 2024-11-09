@@ -36,6 +36,7 @@ class User extends Authenticatable  implements JWTSubject
 
 class UserData extends Model
 {
+    protected $table = 'users';
     protected $fillable = [
         'name',
         'email',
@@ -49,6 +50,6 @@ class UserData extends Model
     ];
     public function leads()
     {
-        return $this->hasMany(Lead::class, 'salesperson_id ');
+        return $this->hasMany(Lead::class, 'salesperson_id');
     }
 }
