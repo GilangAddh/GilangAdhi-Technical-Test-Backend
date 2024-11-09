@@ -1,3 +1,30 @@
+## List of API Endpoints
+
+### **Without JWT Token**
+
+-   `POST` -> http://127.0.0.1:8000/api/login
+-   `POST` -> http://127.0.0.1:8000/api/register
+
+### **With JWT Token**
+
+#### **LEADS MANAGEMENT**
+
+-   `GET` -> http://127.0.0.1:8000/api/leads
+-   `POST` -> http://127.0.0.1:8000/api/leads
+-   `GET` -> http://127.0.0.1:8000/api/leads/{id}
+-   `PATCH` -> http://127.0.0.1:8000/api/leads/{id}
+-   `DELETE` -> http://127.0.0.1:8000/api/leads/{id}
+
+#### **LEAD STATUS**
+
+-   `GET` -> http://127.0.0.1:8000/api/leads-status
+-   `POST` -> http://127.0.0.1:8000/api/leads-status
+-   `DELETE` -> http://127.0.0.1:8000/api/leads-status/{id}
+
+#### **EDIT USER (punish_date and type_sales)**
+
+-   `PATCH` -> http://127.0.0.1:8000/api/users/{id}
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,30 +91,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-## List of API Endpoints
-
-### **Without JWT Token**
-
--   `POST` -> http://127.0.0.1:8000/api/login
--   `POST` -> http://127.0.0.1:8000/api/register
-
-### **With JWT Token**
-
-#### **LEADS MANAGEMENT**
-
--   `GET` -> http://127.0.0.1:8000/api/leads
--   `POST` -> http://127.0.0.1:8000/api/leads
--   `GET` -> http://127.0.0.1:8000/api/leads/{id}
--   `PATCH` -> http://127.0.0.1:8000/api/leads/{id}
--   `DELETE` -> http://127.0.0.1:8000/api/leads/{id}
-
-#### **LEAD STATUS**
-
--   `GET` -> http://127.0.0.1:8000/api/leads-status
--   `POST` -> http://127.0.0.1:8000/api/leads-status
--   `DELETE` -> http://127.0.0.1:8000/api/leads-status/{id}
-
-#### **EDIT USER (punish_date and type_sales)**
-
--   `PATCH` -> http://127.0.0.1:8000/api/users/{id}
