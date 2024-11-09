@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('leads', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('contact_info');
+            $table->string('email');
+            $table->string('phone');
             $table->foreignId('assigned_salesperson_id')->nullable()->constrained('users')->onDelete('set null');
             $table->timestamps();
         });
