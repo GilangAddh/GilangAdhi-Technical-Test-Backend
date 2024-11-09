@@ -13,6 +13,11 @@ class Lead extends Model
         'name',
         'email',
         'phone',
-        'assigned_salesperson_id',
+        'salesperson_id',
     ];
+
+    public function salesperson()
+    {
+        return $this->belongsTo(User::class, 'salesperson_id');
+    }
 }

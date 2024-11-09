@@ -6,11 +6,24 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable implements JWTSubject
+class User extends Authenticatable  implements JWTSubject
 {
     use HasApiTokens, Notifiable;
 
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
+}
+
+class UserData extends Model
+{
     protected $fillable = [
         'name',
         'email',
@@ -22,12 +35,8 @@ class User extends Authenticatable implements JWTSubject
         'password',
         'remember_token',
     ];
-    public function getJWTIdentifier()
+    public function leads()
     {
-        return $this->getKey();
-    }
-    public function getJWTCustomClaims()
-    {
-        return [];
+        return $this->hasMany(Lead::class, 'salesperson_id ');
     }
 }

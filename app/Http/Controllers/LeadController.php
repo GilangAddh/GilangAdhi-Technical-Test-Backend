@@ -10,11 +10,13 @@ class LeadController extends Controller
 {
     public function index()
     {
-        $lead = Lead::latest()->paginate(10);
+        $leads = Lead::latest()
+            ->with('salesperson:id,name')
+            ->paginate(5);
 
         return response()->json([
             'status' => 'success',
-            'data' => $lead
+            'data' => $leads
         ], 200);
     }
 
